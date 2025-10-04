@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import medmapLogo from "@/assets/medmap-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,9 +24,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">M</span>
-            </div>
+            <img src={medmapLogo} alt="MedMap" className="w-10 h-10" />
             <span className="font-bold text-xl text-foreground">MedMap</span>
           </Link>
 
