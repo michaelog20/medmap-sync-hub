@@ -91,6 +91,16 @@ const FAQ = () => {
               ))}
             </Accordion>
           </section>
+
+          <section className="mt-12 p-6 bg-muted rounded-lg border border-border text-center">
+            <p className="text-muted-foreground text-lg mb-3">
+              Still have questions? Send us your question through the{" "}
+              <a href="/contact" className="text-primary hover:underline font-medium">
+                Contact page
+              </a>{" "}
+              and our team will respond.
+            </p>
+          </section>
         </div>
       </div>
     </main>

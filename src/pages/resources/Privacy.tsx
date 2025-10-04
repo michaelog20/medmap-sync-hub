@@ -4,7 +4,7 @@ const Privacy = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-            Privacy & Security Summary
+            Privacy & Security
           </h1>
 
           <div className="prose prose-lg max-w-none space-y-6">

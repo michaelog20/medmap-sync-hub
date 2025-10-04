@@ -17,19 +17,19 @@ const resources = [
   },
   {
     icon: Shield,
-    title: "Privacy & Security Summary",
+    title: "Privacy & Security",
     description: "How we protect your medication data and maintain compliance.",
     link: "/resources/privacy",
   },
   {
     icon: FlaskConical,
-    title: "Pilot Protocol (Summary)",
+    title: "Pilot Protocol",
     description: "Overview of the MedMap pilot study design and measures.",
     link: "/resources/pilot-protocol",
   },
   {
     icon: Code,
-    title: "FHIR Export Guide (Technical)",
+    title: "FHIR Export Guide",
     description: "Technical documentation for FHIR R4 medication exports.",
     link: "/resources/fhir-guide",
   },

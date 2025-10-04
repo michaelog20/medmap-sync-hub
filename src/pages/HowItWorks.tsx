@@ -21,7 +21,7 @@ const steps = [
     number: "03",
     title: "Share securely",
     description: "Export your verified list as a FHIR file or PDF, or generate a secure share link for a clinician or pharmacy. Each export shows a version stamp and brief provenance info.",
-    microcopy: ["Export FHIR", "Download PDF", "Share with clinician"],
+    microcopy: [],
     image: stepShare,
   },
 ];
