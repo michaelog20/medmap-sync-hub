@@ -40,8 +40,27 @@ const HeroSection = () => {
                 <img
                   src={heroMockup}
                   alt="MedMap medication list interface showing phone with medications"
-                  className="w-full animate-pills-bounce"
+                  className="w-full"
                 />
+                
+                {/* Animated CSS Pills - positioned over phone screen */}
+                <div className="absolute inset-0 overflow-visible rounded-2xl pointer-events-none">
+                  {/* Blue/Teal Capsule - top */}
+                  <div className="absolute top-[15%] left-[35%] w-12 h-6 bg-gradient-to-r from-[#0B90C6] to-[#0F6FD1] rounded-full shadow-md animate-pill-bounce-1" />
+                  
+                  {/* Orange Capsule - middle */}
+                  <div className="absolute top-[35%] right-[30%] w-10 h-5 bg-gradient-to-r from-[#FF8A00] to-[#FF6B00] rounded-full shadow-md animate-pill-bounce-2" />
+                  
+                  {/* White Tablet - circular */}
+                  <div className="absolute top-[25%] left-[45%] w-8 h-8 bg-white border-2 border-gray-200 rounded-full shadow-md animate-pill-bounce-3" />
+                  
+                  {/* Pink Capsule - lower */}
+                  <div className="absolute top-[45%] left-[38%] w-11 h-5 bg-gradient-to-r from-[#E91E63] to-[#C2185B] rounded-full shadow-md animate-pill-bounce-4" />
+                  
+                  {/* Yellow Tablet - oval */}
+                  <div className="absolute top-[55%] right-[35%] w-9 h-6 bg-gradient-to-br from-[#FFC107] to-[#FFA000] rounded-full shadow-md animate-pill-bounce-5" />
+                </div>
+                
                 {/* Subtle scanning animation overlay */}
                 <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/10 to-transparent h-1/3 animate-scan-beam" />

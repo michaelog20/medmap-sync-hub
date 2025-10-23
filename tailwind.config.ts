@@ -109,6 +109,26 @@ export default {
           "50%": { transform: "translateY(-4px) scale(1.01)", opacity: "0.98" },
           "75%": { transform: "translateY(-2px) scale(1.005)", opacity: "0.99" },
         },
+        "pill-bounce-1": {
+          "0%, 100%": { transform: "translateY(0) scale(1) rotate(0deg)", opacity: "0.9" },
+          "50%": { transform: "translateY(-15px) scale(1.05) rotate(5deg)", opacity: "1" },
+        },
+        "pill-bounce-2": {
+          "0%, 100%": { transform: "translateY(0) scale(1) rotate(0deg)", opacity: "0.9" },
+          "50%": { transform: "translateY(-12px) scale(1.03) rotate(-3deg)", opacity: "1" },
+        },
+        "pill-bounce-3": {
+          "0%, 100%": { transform: "translateY(0) scale(1)", opacity: "0.85" },
+          "50%": { transform: "translateY(-18px) scale(1.08)", opacity: "1" },
+        },
+        "pill-bounce-4": {
+          "0%, 100%": { transform: "translateY(0) scale(1) rotate(0deg)", opacity: "0.9" },
+          "50%": { transform: "translateY(-10px) scale(1.04) rotate(4deg)", opacity: "1" },
+        },
+        "pill-bounce-5": {
+          "0%, 100%": { transform: "translateY(0) scale(1) rotate(0deg)", opacity: "0.9" },
+          "50%": { transform: "translateY(-14px) scale(1.06) rotate(-2deg)", opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.3s ease-out",
@@ -120,6 +140,11 @@ export default {
         "flow-line": "flow-line 2s ease-out forwards",
         "float-subtle": "float-subtle 6s ease-in-out infinite",
         "pills-bounce": "pills-bounce 3s ease-in-out infinite",
+        "pill-bounce-1": "pill-bounce-1 3.5s ease-in-out infinite",
+        "pill-bounce-2": "pill-bounce-2 4s ease-in-out infinite 0.5s",
+        "pill-bounce-3": "pill-bounce-3 3.2s ease-in-out infinite 1s",
+        "pill-bounce-4": "pill-bounce-4 3.8s ease-in-out infinite 1.5s",
+        "pill-bounce-5": "pill-bounce-5 3.6s ease-in-out infinite 0.8s",
       },
     },
   },
