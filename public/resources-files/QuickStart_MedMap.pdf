@@ -1,0 +1,91 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+4 0 obj
+<<
+/Length 800
+>>
+stream
+BT
+/F1 24 Tf
+50 720 Td
+(MedMap Quick-Start Guide) Tj
+0 -50 Td
+/F1 14 Tf
+(Welcome to MedMap! This guide helps you set up your first medication list.) Tj
+0 -40 Td
+/F1 16 Tf
+(Steps:) Tj
+0 -30 Td
+/F1 12 Tf
+(1. Open the MedMap app or web form) Tj
+0 -20 Td
+(2. Add your medicines:) Tj
+0 -20 Td
+(   - Scan the barcode) Tj
+0 -20 Td
+(   - Snap a photo) Tj
+0 -20 Td
+(   - Type them in manually) Tj
+0 -30 Td
+(3. Review and confirm your list) Tj
+0 -30 Td
+(4. Share securely with your clinician or pharmacist) Tj
+0 -50 Td
+/F1 14 Tf
+(Need help?) Tj
+0 -25 Td
+/F1 12 Tf
+(Visit our FAQ: medmap.study/resources/faq) Tj
+0 -20 Td
+(Contact support: research@medmap.study) Tj
+ET
+endstream
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000009 00000 n
+0000000058 00000 n
+0000000115 00000 n
+0000000274 00000 n
+0000001126 00000 n
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1223
+%%EOF

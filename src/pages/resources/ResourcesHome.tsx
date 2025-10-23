@@ -1,43 +1,43 @@
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { FileText, HelpCircle, Shield, FlaskConical, Code, Users, ArrowRight } from "lucide-react";
+import { FileText, HelpCircle, Shield, FlaskConical, Code, Handshake, ArrowRight } from "lucide-react";
 
 const resources = [
   {
+    title: "Quick-Start Guide",
+    description: "Get started with MedMap in minutes with our step-by-step guide.",
     icon: FileText,
-    title: "Quick-Start Guide (PDF)",
-    description: "One-page starter to set up your first medication list in minutes.",
-    link: "/resources/quickstart",
+    path: "/resources/quickstart",
   },
   {
-    icon: HelpCircle,
     title: "FAQ — Patients & Clinicians",
-    description: "Common questions about using MedMap and sharing medication lists.",
-    link: "/resources/faq",
+    description: "Common questions answered for both patients and healthcare providers.",
+    icon: HelpCircle,
+    path: "/resources/faq",
   },
   {
+    title: "Privacy & Security Summary",
+    description: "Learn how we protect your data and maintain compliance.",
     icon: Shield,
-    title: "Privacy & Security",
-    description: "How we protect your medication data and maintain compliance.",
-    link: "/resources/privacy",
+    path: "/resources/privacy",
   },
   {
+    title: "Pilot Protocol (Summary)",
+    description: "Overview of the MedMap pilot study design and methodology.",
     icon: FlaskConical,
-    title: "Pilot Protocol",
-    description: "Overview of the MedMap pilot study design and measures.",
-    link: "/resources/pilot-protocol",
+    path: "/resources/pilot-protocol",
   },
   {
+    title: "FHIR Export Guide (Technical)",
+    description: "Technical documentation for FHIR integration and data export.",
     icon: Code,
-    title: "FHIR Export Guide",
-    description: "Technical documentation for FHIR R4 medication exports.",
-    link: "/resources/fhir-guide",
+    path: "/resources/fhir-guide",
   },
   {
-    icon: Users,
     title: "Partnering with MedMap",
     description: "Collaboration opportunities for clinics, pharmacies, and researchers.",
-    link: "/resources/partners",
+    icon: Handshake,
+    path: "/resources/partners",
   },
 ];
 
@@ -45,8 +45,8 @@ const ResourcesHome = () => {
   return (
     <main className="pt-24 pb-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Resources
           </h1>
           <p className="text-xl text-muted-foreground">
@@ -56,17 +56,20 @@ const ResourcesHome = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {resources.map((resource, index) => (
-            <Link key={index} to={resource.link} className="group">
-              <Card className="p-6 h-full hover:shadow-md transition-all duration-300">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <resource.icon size={24} className="text-primary" />
+            <Link key={index} to={resource.path} className="group">
+              <Card className="p-6 h-full hover-lift transition-all duration-300">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 icon-glow">
+                    <resource.icon size={24} className="text-primary" />
+                  </div>
+                  <ArrowRight 
+                    size={20} 
+                    className="text-muted-foreground ml-auto transition-transform duration-300 group-hover:translate-x-1" 
+                  />
                 </div>
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {resource.title}
-                  </h3>
-                  <ArrowRight className="text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" size={20} />
-                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">
+                  {resource.title}
+                </h3>
                 <p className="text-muted-foreground">
                   {resource.description}
                 </p>

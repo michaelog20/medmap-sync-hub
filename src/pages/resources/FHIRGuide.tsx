@@ -1,149 +1,122 @@
 import { useState } from "react";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronUp, Download } from "lucide-react";
+import { Code, Download, ChevronDown, ChevronUp } from "lucide-react";
 
 const FHIRGuide = () => {
-  const [showSample, setShowSample] = useState(false);
-
-  const samplePayload = `{
-  "resourceType": "MedicationStatement",
-  "id": "example-med-statement",
-  "status": "active",
-  "medicationCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-        "code": "308136",
-        "display": "Amoxicillin 500 MG Oral Capsule"
-      }
-    ]
-  },
-  "subject": {
-    "reference": "Patient/example"
-  },
-  "effectivePeriod": {
-    "start": "2024-01-15"
-  },
-  "dosage": [
-    {
-      "text": "Take one capsule three times daily",
-      "timing": {
-        "repeat": {
-          "frequency": 3,
-          "period": 1,
-          "periodUnit": "d"
-        }
-      },
-      "route": {
-        "coding": [
-          {
-            "system": "http://snomed.info/sct",
-            "code": "26643006",
-            "display": "Oral route"
-          }
-        ]
-      },
-      "doseAndRate": [
-        {
-          "doseQuantity": {
-            "value": 500,
-            "unit": "mg",
-            "system": "http://unitsofmeasure.org",
-            "code": "mg"
-          }
-        }
-      ]
-    }
-  ]
-}`;
+  const [showPayload, setShowPayload] = useState(false);
 
   return (
     <main className="pt-24 pb-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             FHIR Export Guide (Technical)
           </h1>
+          <p className="text-xl text-muted-foreground mb-12">
+            MedMap supports export in FHIR R4 MedicationStatement and MedicationRequest formats.
+          </p>
 
-          <div className="prose prose-lg max-w-none space-y-6">
-            <p className="text-lg text-muted-foreground">
-              MedMap supports export in FHIR R4 MedicationStatement and MedicationRequest formats.
-            </p>
+          <Card className="p-8 mb-6">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Code size={24} className="text-primary" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-semibold text-foreground mb-4">
+                  Key Points
+                </h2>
+              </div>
+            </div>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-3">
-                Key Points
-              </h2>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• <strong>MedicationStatement</strong> = what the patient is taking (self-reported, reconciled).</li>
-                <li>• <strong>MedicationRequest</strong> = what has been prescribed.</li>
-                <li>• Includes fields for medication code, dosage, route, frequency, and notes.</li>
-                <li>• Compatible with major EHR systems that support FHIR R4.</li>
-                <li>• Sample payloads available for integration testing.</li>
-              </ul>
-            </section>
+            <ul className="space-y-4 text-muted-foreground">
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg">•</span>
+                <span>
+                  <strong className="text-foreground">MedicationStatement</strong> = what the patient is taking (self-reported, reconciled).
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg">•</span>
+                <span>
+                  <strong className="text-foreground">MedicationRequest</strong> = what has been prescribed.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg">•</span>
+                <span>
+                  Includes fields for <strong className="text-foreground">medication code, dosage, route, frequency, and notes</strong>.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg">•</span>
+                <span>
+                  Compatible with <strong className="text-foreground">major EHR systems</strong> that support FHIR R4.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg">•</span>
+                <span>
+                  <strong className="text-foreground">Sample payloads available</strong> for integration testing.
+                </span>
+              </li>
+            </ul>
+          </Card>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-3">
+          <Card className="p-8">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-xl font-semibold text-foreground">
                 Sample FHIR Payload
-              </h2>
-              <p className="text-muted-foreground mb-4">
-                Below is a simplified example of a FHIR R4 MedicationStatement resource. Click to view the JSON structure.
-              </p>
-              
-              <Button
-                onClick={() => setShowSample(!showSample)}
-                variant="outline"
-                className="mb-4 gap-2"
-              >
-                {showSample ? (
-                  <>
-                    <ChevronUp size={20} />
-                    Hide sample payload
-                  </>
-                ) : (
-                  <>
-                    <ChevronDown size={20} />
-                    Show sample payload
-                  </>
-                )}
-              </Button>
-
-              <div 
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  showSample ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-                }`}
-              >
-                <div className="bg-muted p-6 rounded-lg border border-border overflow-x-auto">
-                  <pre className="text-sm text-foreground whitespace-pre-wrap">
-                    {samplePayload}
-                  </pre>
-                </div>
-              </div>
-
-              <div className="mt-6">
-                <Button className="gap-2">
-                  <Download size={20} />
-                  Download Sample FHIR Export
+              </h3>
+              <div className="flex gap-3">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setShowPayload(!showPayload)}
+                  className="gap-2"
+                >
+                  {showPayload ? (
+                    <>
+                      <ChevronUp size={16} />
+                      Hide sample
+                    </>
+                  ) : (
+                    <>
+                      <ChevronDown size={16} />
+                      Show sample payload
+                    </>
+                  )}
                 </Button>
-                <p className="text-sm text-muted-foreground mt-2">
-                  (Full JSON file available in production version)
-                </p>
+                <Button size="sm" className="gap-2" asChild>
+                  <a href="/resources-files/sample_medmap_fhir_export.json" download>
+                    <Download size={16} />
+                    Download JSON
+                  </a>
+                </Button>
               </div>
-            </section>
+            </div>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-3">
-                Integration Support
-              </h2>
-              <p className="text-muted-foreground">
-                For technical questions about FHIR integration or to request sample exports for testing, contact{" "}
-                <a href="mailto:research@medmap.study" className="text-primary hover:underline">
-                  research@medmap.study
-                </a>
-              </p>
-            </section>
-          </div>
+            <div 
+              className={`overflow-hidden transition-all duration-500 ${
+                showPayload ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+              }`}
+            >
+              <pre className="bg-muted p-6 rounded-lg overflow-x-auto text-sm">
+                <code>{`{
+  "resourceType": "MedicationStatement",
+  "id": "example-medmap-001",
+  "status": "active",
+  "medicationCodeableConcept": {
+    "coding": [{
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "197361",
+      "display": "Metformin 500 MG Oral Tablet"
+    }]
+  }
+}`}</code>
+              </pre>
+            </div>
+          </Card>
         </div>
       </div>
     </main>
