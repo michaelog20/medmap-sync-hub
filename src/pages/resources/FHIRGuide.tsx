@@ -62,7 +62,7 @@ const FHIRGuide = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-            FHIR Export Guide
+            FHIR Export Guide (Technical)
           </h1>
 
           <div className="prose prose-lg max-w-none space-y-6">
@@ -109,13 +109,17 @@ const FHIRGuide = () => {
                 )}
               </Button>
 
-              {showSample && (
+              <div 
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  showSample ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
                 <div className="bg-muted p-6 rounded-lg border border-border overflow-x-auto">
                   <pre className="text-sm text-foreground whitespace-pre-wrap">
                     {samplePayload}
                   </pre>
                 </div>
-              )}
+              </div>
 
               <div className="mt-6">
                 <Button className="gap-2">

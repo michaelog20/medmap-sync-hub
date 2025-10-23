@@ -95,6 +95,7 @@ const Contact = () => {
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                   placeholder="John Doe"
+                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 />
               </div>
 
@@ -107,6 +108,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="john.doe@example.com"
+                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 />
               </div>
 
@@ -117,7 +119,7 @@ const Contact = () => {
                   required
                   value={formData.role}
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                  className="w-full px-3 py-2 border border-input rounded-md bg-background"
+                  className="w-full px-3 py-2 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 >
                   <option value="">Select your role</option>
                   <option value="patient">Patient</option>
@@ -137,6 +139,7 @@ const Contact = () => {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Tell us how we can help..."
                   rows={6}
+                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 />
               </div>
 

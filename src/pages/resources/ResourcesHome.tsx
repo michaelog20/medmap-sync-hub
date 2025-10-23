@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { FileText, HelpCircle, Shield, FlaskConical, Code, Users } from "lucide-react";
+import { FileText, HelpCircle, Shield, FlaskConical, Code, Users, ArrowRight } from "lucide-react";
 
 const resources = [
   {
@@ -56,14 +56,17 @@ const ResourcesHome = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {resources.map((resource, index) => (
-            <Link key={index} to={resource.link}>
-              <Card className="p-6 h-full hover:shadow-md transition-shadow duration-300 group">
+            <Link key={index} to={resource.link} className="group">
+              <Card className="p-6 h-full hover:shadow-md transition-all duration-300">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <resource.icon size={24} className="text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {resource.title}
-                </h3>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {resource.title}
+                  </h3>
+                  <ArrowRight className="text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" size={20} />
+                </div>
                 <p className="text-muted-foreground">
                   {resource.description}
                 </p>

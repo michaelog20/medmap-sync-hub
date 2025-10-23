@@ -100,6 +100,7 @@ const PilotSignup = () => {
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                   placeholder="John Doe"
+                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 />
               </div>
 
@@ -112,6 +113,7 @@ const PilotSignup = () => {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="john.doe@example.com"
+                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 />
               </div>
 
@@ -123,6 +125,7 @@ const PilotSignup = () => {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="(416) 555-0123"
+                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 />
               </div>
 
@@ -133,7 +136,7 @@ const PilotSignup = () => {
                   required
                   value={formData.ageRange}
                   onChange={(e) => setFormData({ ...formData, ageRange: e.target.value })}
-                  className="w-full px-3 py-2 border border-input rounded-md bg-background"
+                  className="w-full px-3 py-2 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 >
                   <option value="">Select age range</option>
                   <option value="18-24">18-24</option>
@@ -153,6 +156,7 @@ const PilotSignup = () => {
                   value={formData.medications}
                   onChange={(e) => setFormData({ ...formData, medications: e.target.value })}
                   placeholder="e.g., 3-5 medications"
+                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 />
               </div>
 

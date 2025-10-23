@@ -15,13 +15,13 @@ const HeroSection = () => {
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Keep Every Medication in Sync — Safely and Simply
+              Keep Every Medication in <span className="text-primary">Sync</span> — <span className="text-primary">Safely and Simply</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-4">
               The first medication reconciliation platform built for patients, providers, and pharmacists.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
-              With MedMap, you capture, verify, and share a single up-to-date medication list. Reduce errors, prevent adverse interactions, and give every care provider confidence they're working from the same record.
+              With MedMap, you capture, verify, and share a single <strong>up-to-date medication list</strong>. Reduce errors, prevent adverse interactions, and give every care provider confidence they're working from the same record.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg">
