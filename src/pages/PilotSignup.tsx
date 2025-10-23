@@ -4,18 +4,18 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Card } from "@/components/ui/card";
+import ScrollAnimations from "@/components/home/ScrollAnimations";
 
 const PilotSignup = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    fullName: "",
+    name: "",
     email: "",
     phone: "",
-    ageRange: "",
     medications: "",
-    consent: false,
+    consent: false
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -23,187 +23,207 @@ const PilotSignup = () => {
     
     if (!formData.consent) {
       toast({
-        title: "Consent Required",
-        description: "Please review and agree to the consent terms to continue.",
-        variant: "destructive",
+        title: "Consent required",
+        description: "Please agree to the consent statement to participate.",
+        variant: "destructive"
       });
       return;
     }
 
-    // Mock submission - in production, connect to Netlify/Formspree
+    // Mock endpoint - replace with actual form handler
     toast({
-      title: "Application Submitted!",
-      description: "Thank you for your interest. We'll contact you within 3-5 business days.",
+      title: "Application received!",
+      description: "We'll contact you within one week to schedule your onboarding session.",
     });
-
-    // Reset form
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      ageRange: "",
-      medications: "",
-      consent: false,
-    });
+    setFormData({ name: "", email: "", phone: "", medications: "", consent: false });
   };
 
   return (
-    <main className="pt-24 pb-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
+    <main>
+      <ScrollAnimations />
+      <section className="py-20">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="mb-12 scroll-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Join the MedMap Pilot
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-xl text-muted-foreground">
               Thank you for your interest in helping test MedMap. The pilot evaluates usability and the effect of a patient-verified medication list on reconciliation accuracy.
             </p>
           </div>
 
-          <Card className="p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">
-              What participation involves
-            </h2>
-            <ul className="space-y-3 text-muted-foreground mb-6">
-              <li className="flex items-start gap-2">
-                <span className="text-primary font-bold">•</span>
-                <span><strong>Onboarding session (15–30 minutes):</strong> Create your initial medication list with researcher support (in-person or virtual).</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary font-bold">•</span>
-                <span><strong>Baseline audit:</strong> A researcher compares your usual medication list to a reference (e.g., pharmacy record or chart).</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary font-bold">•</span>
-                <span><strong>Follow-up (2–4 weeks):</strong> Update your MedMap list, then complete a follow-up audit and a brief interview (~20–30 minutes).</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary font-bold">•</span>
-                <span><strong>Optional questionnaires:</strong> System Usability Scale (SUS) and short experience surveys.</span>
-              </li>
-            </ul>
-            <p className="text-sm text-muted-foreground">
-              <strong>Time commitment:</strong> Total estimated time: 60–90 minutes over the pilot period.
-            </p>
+          <Card className="mb-8 scroll-fade-in" style={{ animationDelay: "0.1s" }}>
+            <CardHeader>
+              <CardTitle className="text-2xl">What participation involves</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Onboarding session (15–30 minutes)</h3>
+                <p className="text-muted-foreground">
+                  Create your initial medication list with researcher support (in-person or virtual).
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Baseline audit</h3>
+                <p className="text-muted-foreground">
+                  A researcher compares your usual medication list to a reference (e.g., pharmacy record or chart).
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Follow-up (2–4 weeks)</h3>
+                <p className="text-muted-foreground">
+                  Update your MedMap list, then complete a follow-up audit and a brief interview (~20–30 minutes).
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Optional questionnaires</h3>
+                <p className="text-muted-foreground">
+                  System Usability Scale (SUS) and short experience surveys.
+                </p>
+              </div>
+              <div className="pt-4 border-t">
+                <p className="font-semibold">Time commitment:</p>
+                <p className="text-muted-foreground">Total estimated time: 60–90 minutes over the pilot period.</p>
+              </div>
+            </CardContent>
           </Card>
 
-          <Card className="p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-6">
-              Sign up for the pilot
-            </h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <Label htmlFor="fullName">Full Name *</Label>
-                <Input
-                  id="fullName"
-                  required
-                  value={formData.fullName}
-                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  placeholder="John Doe"
-                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
-                />
-              </div>
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <Card className="scroll-fade-in" style={{ animationDelay: "0.2s" }}>
+              <CardHeader>
+                <CardTitle>Data collected</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <li>Personal identifiers (name, email)</li>
+                  <li>Medication list data</li>
+                  <li>Usage logs (timestamps, actions)</li>
+                  <li>Optional adherence metadata</li>
+                </ul>
+              </CardContent>
+            </Card>
 
-              <div>
-                <Label htmlFor="email">Email Address *</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="john.doe@example.com"
-                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
-                />
-              </div>
+            <Card className="scroll-fade-in" style={{ animationDelay: "0.3s" }}>
+              <CardHeader>
+                <CardTitle>How used</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Data will be used for reconciliation audits, usability analysis, and thesis research. All data is de-identified for analysis and never shared for advertising.
+                </p>
+              </CardContent>
+            </Card>
 
-              <div>
-                <Label htmlFor="phone">Phone Number</Label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  placeholder="(416) 555-0123"
-                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
-                />
-              </div>
+            <Card className="scroll-fade-in" style={{ animationDelay: "0.4s" }}>
+              <CardHeader>
+                <CardTitle>Privacy & security</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  TLS encryption in transit, encrypted storage at rest, and role-based access controls. See our Privacy page for full details.
+                </p>
+              </CardContent>
+            </Card>
 
-              <div>
-                <Label htmlFor="ageRange">Age Range *</Label>
-                <select
-                  id="ageRange"
-                  required
-                  value={formData.ageRange}
-                  onChange={(e) => setFormData({ ...formData, ageRange: e.target.value })}
-                  className="w-full px-3 py-2 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all"
-                >
-                  <option value="">Select age range</option>
-                  <option value="18-24">18-24</option>
-                  <option value="25-34">25-34</option>
-                  <option value="35-44">35-44</option>
-                  <option value="45-54">45-54</option>
-                  <option value="55-64">55-64</option>
-                  <option value="65+">65+</option>
-                </select>
-              </div>
+            <Card className="scroll-fade-in" style={{ animationDelay: "0.5s" }}>
+              <CardHeader>
+                <CardTitle>Risks & benefits</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Minimal risk. Potential benefits include a safer medication list and contributing to improved reconciliation practices. No monetary compensation provided.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
 
-              <div>
-                <Label htmlFor="medications">How many medications do you currently take? *</Label>
-                <Input
-                  id="medications"
-                  required
-                  value={formData.medications}
-                  onChange={(e) => setFormData({ ...formData, medications: e.target.value })}
-                  placeholder="e.g., 3-5 medications"
-                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
-                />
-              </div>
-
-              <div className="border border-border rounded-lg p-6 bg-muted/30">
-                <h3 className="font-semibold text-foreground mb-4">Informed Consent</h3>
-                <div className="space-y-3 text-sm text-muted-foreground mb-4">
-                  <p>
-                    <strong>Data collected:</strong> Personal identifiers (name, email), medication list data, usage logs, and optional adherence metadata.
-                  </p>
-                  <p>
-                    <strong>How used:</strong> For reconciliation audits, usability analysis, and pilot research outcomes.
-                  </p>
-                  <p>
-                    <strong>Privacy & security:</strong> Data encrypted in transit and at rest. Access limited to authorized research staff.
-                  </p>
-                  <p>
-                    <strong>Risks & benefits:</strong> Minimal risk. Potential benefits include improved medication safety and contributing to healthcare research.
-                  </p>
+          <Card className="scroll-fade-in" style={{ animationDelay: "0.6s" }}>
+            <CardHeader>
+              <CardTitle className="text-2xl">Sign up for the pilot</CardTitle>
+              <CardDescription className="text-base">
+                Complete this form to express interest. We'll contact you to schedule your onboarding session.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <Label htmlFor="name" className="text-base">Full name *</Label>
+                  <Input
+                    id="name"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="mt-2 focus:ring-2 focus:ring-primary transition-all"
+                  />
                 </div>
-                <div className="flex items-start gap-3">
+
+                <div>
+                  <Label htmlFor="email" className="text-base">Email address *</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="mt-2 focus:ring-2 focus:ring-primary transition-all"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="phone" className="text-base">Phone number *</Label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    required
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="mt-2 focus:ring-2 focus:ring-primary transition-all"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="medications" className="text-base">
+                    How many medications do you currently take? *
+                  </Label>
+                  <Textarea
+                    id="medications"
+                    required
+                    rows={3}
+                    placeholder="Please provide an approximate number and any relevant details"
+                    value={formData.medications}
+                    onChange={(e) => setFormData({ ...formData, medications: e.target.value })}
+                    className="mt-2 focus:ring-2 focus:ring-primary transition-all"
+                  />
+                </div>
+
+                <div className="flex items-start gap-3 p-4 border rounded-lg bg-secondary/5">
                   <Checkbox
                     id="consent"
                     checked={formData.consent}
-                    onCheckedChange={(checked) =>
+                    onCheckedChange={(checked) => 
                       setFormData({ ...formData, consent: checked as boolean })
                     }
+                    className="mt-1"
                   />
-                  <Label htmlFor="consent" className="text-sm cursor-pointer">
-                    I have read and understood the pilot information above. I consent to participate in the MedMap pilot study and understand that my data will be used for research purposes as described. *
-                  </Label>
+                  <div className="flex-1">
+                    <Label htmlFor="consent" className="text-base font-semibold cursor-pointer">
+                      Consent to participate *
+                    </Label>
+                    <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                      I understand what the pilot involves, how my data will be used, and that I can withdraw at any time. 
+                      I consent to participate in the MedMap pilot study and agree to the data collection and usage as described above.
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <Button type="submit" size="lg" className="w-full">
-                Submit Application
-              </Button>
-            </form>
+                <Button type="submit" size="lg" className="w-full md:w-auto">
+                  Submit Application
+                </Button>
+              </form>
+            </CardContent>
           </Card>
-
-          <p className="text-sm text-muted-foreground text-center">
-            Questions about the pilot? Contact us at{" "}
-            <a href="mailto:research@medmap.study" className="text-primary hover:underline">
-              research@medmap.study
-            </a>
-          </p>
         </div>
-      </div>
+      </section>
     </main>
   );
 };

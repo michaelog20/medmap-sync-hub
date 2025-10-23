@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Card } from "@/components/ui/card";
-import { useToast } from "@/hooks/use-toast";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Clock, MapPin } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import ScrollAnimations from "@/components/home/ScrollAnimations";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -82,71 +84,71 @@ const Contact = () => {
             </Card>
           </div>
 
-          <Card className="p-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-6">
-              Send us a message
-            </h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <Label htmlFor="fullName">Full Name *</Label>
-                <Input
-                  id="fullName"
-                  required
-                  value={formData.fullName}
-                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  placeholder="John Doe"
-                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
-                />
-              </div>
+          <Card className="scroll-fade-in" style={{ animationDelay: "0.3s" }}>
+            <CardHeader>
+              <CardTitle className="text-2xl">Send us a message</CardTitle>
+              <CardDescription className="text-base">
+                Fill out the form below and we'll respond as soon as possible.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <Label htmlFor="fullName" className="text-base">Full name *</Label>
+                  <Input
+                    id="fullName"
+                    required
+                    value={formData.fullName}
+                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                    className="mt-2 focus:ring-2 focus:ring-primary transition-all"
+                  />
+                </div>
 
-              <div>
-                <Label htmlFor="email">Email Address *</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="john.doe@example.com"
-                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
-                />
-              </div>
+                <div>
+                  <Label htmlFor="email" className="text-base">Email address *</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="mt-2 focus:ring-2 focus:ring-primary transition-all"
+                  />
+                </div>
 
-              <div>
-                <Label htmlFor="role">Role *</Label>
-                <select
-                  id="role"
-                  required
-                  value={formData.role}
-                  onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                  className="w-full px-3 py-2 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all"
-                >
-                  <option value="">Select your role</option>
-                  <option value="patient">Patient</option>
-                  <option value="clinician">Clinician</option>
-                  <option value="pharmacist">Pharmacist</option>
-                  <option value="researcher">Researcher</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+                <div>
+                  <Label htmlFor="role" className="text-base">Role *</Label>
+                  <Select value={formData.role} onValueChange={(value) => setFormData({ ...formData, role: value })}>
+                    <SelectTrigger className="mt-2 focus:ring-2 focus:ring-primary transition-all">
+                      <SelectValue placeholder="Select your role" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="patient">Patient</SelectItem>
+                      <SelectItem value="clinician">Clinician</SelectItem>
+                      <SelectItem value="pharmacist">Pharmacist</SelectItem>
+                      <SelectItem value="researcher">Researcher</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
 
-              <div>
-                <Label htmlFor="message">Message *</Label>
-                <Textarea
-                  id="message"
-                  required
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Tell us how we can help..."
-                  rows={6}
-                  className="focus:ring-2 focus:ring-primary focus:border-primary transition-all"
-                />
-              </div>
+                <div>
+                  <Label htmlFor="message" className="text-base">Message *</Label>
+                  <Textarea
+                    id="message"
+                    required
+                    rows={6}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="mt-2 focus:ring-2 focus:ring-primary transition-all"
+                  />
+                </div>
 
-              <Button type="submit" size="lg" className="w-full">
-                Send Message
-              </Button>
-            </form>
+                <Button type="submit" size="lg" className="w-full md:w-auto">
+                  Send Message
+                </Button>
+              </form>
+            </CardContent>
           </Card>
         </div>
       </div>
