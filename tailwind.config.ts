@@ -99,6 +99,10 @@ export default {
           "0%": { strokeDashoffset: "1000" },
           "100%": { strokeDashoffset: "0" },
         },
+        "float-subtle": {
+          "0%, 100%": { transform: "translateY(0px) scale(1)" },
+          "50%": { transform: "translateY(-10px) scale(1.02)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.3s ease-out",
@@ -108,6 +112,7 @@ export default {
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "scan-beam": "scan-beam 4s ease-in-out infinite",
         "flow-line": "flow-line 2s ease-out forwards",
+        "float-subtle": "float-subtle 6s ease-in-out infinite",
       },
     },
   },

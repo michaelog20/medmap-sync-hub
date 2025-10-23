@@ -35,7 +35,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="relative animate-fade-in">
-            <div className="relative z-10 group">
+            <div className="relative z-10 group animate-float-subtle">
               <img
                 src={heroMockup}
                 alt="MedMap medication list interface on smartphone"
