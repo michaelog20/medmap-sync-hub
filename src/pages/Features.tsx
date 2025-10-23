@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Camera, Shield, Share2, Bell, History, Users, BarChart3, Lock } from "lucide-react";
+import ScrollAnimations from "@/components/home/ScrollAnimations";
 
 const features = [
   {
@@ -47,6 +48,7 @@ const features = [
 const Features = () => {
   return (
     <main className="pt-24 pb-20">
+      <ScrollAnimations />
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -59,11 +61,11 @@ const Features = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16 scroll-fade-in">
           {features.map((feature, index) => (
             <Card key={index} className="p-8 hover:shadow-md transition-shadow duration-300">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center icon-glow">
                   <feature.icon size={24} className="text-primary" />
                 </div>
                 <div>

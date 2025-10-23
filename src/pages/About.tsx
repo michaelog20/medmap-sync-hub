@@ -1,13 +1,16 @@
+import ScrollAnimations from "@/components/home/ScrollAnimations";
+
 const About = () => {
   return (
     <main className="pt-24 pb-20">
+      <ScrollAnimations />
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8 animated-underline">
             About MedMap
           </h1>
 
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none scroll-fade-in">
             <p className="text-lg text-muted-foreground mb-6">
               MedMap was created to tackle a common and dangerous problem: inconsistent medication records across patients, pharmacies, and clinics. When medication lists are fragmented or out of date, reconciliation during clinic visits and care transitions becomes slow and error-prone — and that leads to adverse drug events, avoidable hospital visits, and frustrated clinicians.
             </p>

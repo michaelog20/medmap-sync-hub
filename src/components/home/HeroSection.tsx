@@ -35,14 +35,18 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="relative animate-fade-in">
-            <div className="relative z-10">
+            <div className="relative z-10 group">
               <img
                 src={heroMockup}
                 alt="MedMap medication list interface on smartphone"
                 className="w-full rounded-2xl shadow-lg"
               />
+              {/* Subtle scanning animation overlay */}
+              <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/10 to-transparent h-1/3 animate-scan-beam" />
+              </div>
             </div>
-            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-gradient-hero rounded-full blur-3xl opacity-20 -z-10" />
+            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-gradient-hero rounded-full blur-3xl opacity-20 -z-10 animate-pulse-glow" />
           </div>
         </div>
       </div>

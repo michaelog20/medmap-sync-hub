@@ -85,12 +85,28 @@ export default {
           from: { transform: "translateX(-100%)" },
           to: { transform: "translateX(0)" },
         },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.7" },
+        },
+        "scan-beam": {
+          "0%": { transform: "translateY(-100%)", opacity: "0" },
+          "50%": { opacity: "1" },
+          "100%": { transform: "translateY(100%)", opacity: "0" },
+        },
+        "flow-line": {
+          "0%": { strokeDashoffset: "1000" },
+          "100%": { strokeDashoffset: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.3s ease-out",
         "accordion-up": "accordion-up 0.3s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
         "slide-in-left": "slide-in-left 0.3s ease-out",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "scan-beam": "scan-beam 4s ease-in-out infinite",
+        "flow-line": "flow-line 2s ease-out forwards",
       },
     },
   },

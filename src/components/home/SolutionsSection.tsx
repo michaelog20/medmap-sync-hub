@@ -44,7 +44,7 @@ const SolutionsSection = () => {
           {solutions.map((solution, index) => (
             <Card
               key={index}
-              className="p-6 hover:shadow-md transition-shadow duration-300 bg-gradient-card border-border"
+              className="p-6 bg-gradient-card border-border hover-lift"
             >
               <div className="mb-4">
                 <img
