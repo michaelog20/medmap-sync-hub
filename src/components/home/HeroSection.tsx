@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroMockup from "@/assets/hero-phone-pills.avif";
+import heroMockup from "@/assets/hero-pills-bounce.jpg";
 
 const HeroSection = () => {
   return (
@@ -36,44 +36,12 @@ const HeroSection = () => {
           </div>
           <div className="relative animate-fade-in">
             <div className="relative z-10 group">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   src={heroMockup}
-                  alt="MedMap medication list interface showing phone with medications"
-                  className="w-full"
+                  alt="MedMap medication list interface showing phone with colorful pills bouncing dynamically"
+                  className="w-full h-auto animate-hero-float"
                 />
-                
-                {/* Animated CSS Pills - video-like bouncing effect */}
-                <div className="absolute inset-0 overflow-visible rounded-2xl pointer-events-none">
-                  {/* Blue/Teal Capsule */}
-                  <div className="absolute top-[15%] left-[35%] w-12 h-6 bg-gradient-to-r from-[#0B90C6] to-[#0F6FD1] rounded-full shadow-lg animate-pill-bounce-1" 
-                       style={{ boxShadow: '0 4px 12px rgba(11, 144, 198, 0.4)' }} />
-                  
-                  {/* Orange Capsule */}
-                  <div className="absolute top-[35%] right-[30%] w-10 h-5 bg-gradient-to-r from-[#FF8A00] to-[#FF6B00] rounded-full shadow-lg animate-pill-bounce-2"
-                       style={{ boxShadow: '0 4px 12px rgba(255, 138, 0, 0.4)' }} />
-                  
-                  {/* White Tablet */}
-                  <div className="absolute top-[25%] left-[45%] w-8 h-8 bg-white border-2 border-gray-200 rounded-full shadow-lg animate-pill-bounce-3"
-                       style={{ boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)' }} />
-                  
-                  {/* Pink Capsule */}
-                  <div className="absolute top-[45%] left-[38%] w-11 h-5 bg-gradient-to-r from-[#E91E63] to-[#C2185B] rounded-full shadow-lg animate-pill-bounce-4"
-                       style={{ boxShadow: '0 4px 12px rgba(233, 30, 99, 0.4)' }} />
-                  
-                  {/* Yellow Tablet */}
-                  <div className="absolute top-[55%] right-[35%] w-9 h-6 bg-gradient-to-br from-[#FFC107] to-[#FFA000] rounded-full shadow-lg animate-pill-bounce-5"
-                       style={{ boxShadow: '0 4px 12px rgba(255, 193, 7, 0.4)' }} />
-                  
-                  {/* Additional smaller pills for depth */}
-                  <div className="absolute top-[20%] right-[40%] w-6 h-3 bg-gradient-to-r from-[#9C27B0] to-[#7B1FA2] rounded-full shadow-md animate-pill-bounce-1 opacity-70" />
-                  <div className="absolute top-[50%] left-[30%] w-7 h-4 bg-gradient-to-r from-[#4CAF50] to-[#388E3C] rounded-full shadow-md animate-pill-bounce-3 opacity-70" />
-                </div>
-                
-                {/* Subtle scanning animation overlay */}
-                <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/10 to-transparent h-1/3 animate-scan-beam" />
-                </div>
               </div>
             </div>
             <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-gradient-hero rounded-full blur-3xl opacity-20 -z-10 animate-pulse-glow" />

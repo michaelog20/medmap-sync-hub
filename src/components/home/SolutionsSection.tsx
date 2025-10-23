@@ -51,7 +51,7 @@ const SolutionsSection = () => {
             return (
               <Card
                 key={index}
-                className="hover-lift border-2 overflow-hidden scroll-fade-in"
+                className="group hover-lift border-2 overflow-hidden scroll-fade-in transition-all duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-xl"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative h-48 overflow-hidden">
