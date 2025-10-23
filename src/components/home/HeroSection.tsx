@@ -43,22 +43,31 @@ const HeroSection = () => {
                   className="w-full"
                 />
                 
-                {/* Animated CSS Pills - positioned over phone screen */}
+                {/* Animated CSS Pills - video-like bouncing effect */}
                 <div className="absolute inset-0 overflow-visible rounded-2xl pointer-events-none">
-                  {/* Blue/Teal Capsule - top */}
-                  <div className="absolute top-[15%] left-[35%] w-12 h-6 bg-gradient-to-r from-[#0B90C6] to-[#0F6FD1] rounded-full shadow-md animate-pill-bounce-1" />
+                  {/* Blue/Teal Capsule */}
+                  <div className="absolute top-[15%] left-[35%] w-12 h-6 bg-gradient-to-r from-[#0B90C6] to-[#0F6FD1] rounded-full shadow-lg animate-pill-bounce-1" 
+                       style={{ boxShadow: '0 4px 12px rgba(11, 144, 198, 0.4)' }} />
                   
-                  {/* Orange Capsule - middle */}
-                  <div className="absolute top-[35%] right-[30%] w-10 h-5 bg-gradient-to-r from-[#FF8A00] to-[#FF6B00] rounded-full shadow-md animate-pill-bounce-2" />
+                  {/* Orange Capsule */}
+                  <div className="absolute top-[35%] right-[30%] w-10 h-5 bg-gradient-to-r from-[#FF8A00] to-[#FF6B00] rounded-full shadow-lg animate-pill-bounce-2"
+                       style={{ boxShadow: '0 4px 12px rgba(255, 138, 0, 0.4)' }} />
                   
-                  {/* White Tablet - circular */}
-                  <div className="absolute top-[25%] left-[45%] w-8 h-8 bg-white border-2 border-gray-200 rounded-full shadow-md animate-pill-bounce-3" />
+                  {/* White Tablet */}
+                  <div className="absolute top-[25%] left-[45%] w-8 h-8 bg-white border-2 border-gray-200 rounded-full shadow-lg animate-pill-bounce-3"
+                       style={{ boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)' }} />
                   
-                  {/* Pink Capsule - lower */}
-                  <div className="absolute top-[45%] left-[38%] w-11 h-5 bg-gradient-to-r from-[#E91E63] to-[#C2185B] rounded-full shadow-md animate-pill-bounce-4" />
+                  {/* Pink Capsule */}
+                  <div className="absolute top-[45%] left-[38%] w-11 h-5 bg-gradient-to-r from-[#E91E63] to-[#C2185B] rounded-full shadow-lg animate-pill-bounce-4"
+                       style={{ boxShadow: '0 4px 12px rgba(233, 30, 99, 0.4)' }} />
                   
-                  {/* Yellow Tablet - oval */}
-                  <div className="absolute top-[55%] right-[35%] w-9 h-6 bg-gradient-to-br from-[#FFC107] to-[#FFA000] rounded-full shadow-md animate-pill-bounce-5" />
+                  {/* Yellow Tablet */}
+                  <div className="absolute top-[55%] right-[35%] w-9 h-6 bg-gradient-to-br from-[#FFC107] to-[#FFA000] rounded-full shadow-lg animate-pill-bounce-5"
+                       style={{ boxShadow: '0 4px 12px rgba(255, 193, 7, 0.4)' }} />
+                  
+                  {/* Additional smaller pills for depth */}
+                  <div className="absolute top-[20%] right-[40%] w-6 h-3 bg-gradient-to-r from-[#9C27B0] to-[#7B1FA2] rounded-full shadow-md animate-pill-bounce-1 opacity-70" />
+                  <div className="absolute top-[50%] left-[30%] w-7 h-4 bg-gradient-to-r from-[#4CAF50] to-[#388E3C] rounded-full shadow-md animate-pill-bounce-3 opacity-70" />
                 </div>
                 
                 {/* Subtle scanning animation overlay */}

@@ -1,4 +1,5 @@
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+import { Camera, Shield, Share2, Calendar } from "lucide-react";
 import solutionCapture from "@/assets/solution-capture.jpg";
 import solutionVerify from "@/assets/solution-verify.jpg";
 import solutionShare from "@/assets/solution-share.jpg";
@@ -6,21 +7,25 @@ import solutionAdherence from "@/assets/solution-adherence.jpg";
 
 const solutions = [
   {
+    icon: Camera,
     title: "Capture Medications",
     description: "Scan barcodes, snap photos, or upload prescriptions. MedMap automatically recognizes and organizes your meds.",
     image: solutionCapture,
   },
   {
+    icon: Shield,
     title: "Verify & Protect",
     description: "Run real-time interaction checks, allergy alerts, and version tracking — ensuring accuracy and safety.",
     image: solutionVerify,
   },
   {
+    icon: Share2,
     title: "Share Securely",
     description: "Export medication lists as PDFs or FHIR files directly with providers and care teams.",
     image: solutionShare,
   },
   {
+    icon: Calendar,
     title: "Support Adherence",
     description: "Refill reminders, dose tracking, and a history log keep patients on track with their therapy.",
     image: solutionAdherence,
@@ -29,38 +34,47 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16 scroll-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            One Trusted Medication List. Shared Securely.
+            How MedMap Works for You
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            MedMap brings together everything you need to manage and share your medications safely.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Four simple steps to safer, more coordinated medication management
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {solutions.map((solution, index) => (
-            <Card
-              key={index}
-              className="p-6 bg-gradient-card border-border hover-lift"
-            >
-              <div className="mb-4">
-                <img
-                  src={solution.image}
-                  alt={solution.title}
-                  className="w-20 h-20 object-contain mx-auto"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">
-                {solution.title}
-              </h3>
-              <p className="text-muted-foreground">
-                {solution.description}
-              </p>
-            </Card>
-          ))}
+          {solutions.map((solution, index) => {
+            const Icon = solution.icon;
+            return (
+              <Card
+                key={index}
+                className="hover-lift border-2 overflow-hidden scroll-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={solution.image}
+                    alt={solution.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <div className="mb-4 icon-glow">
+                    <Icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary mb-3">
+                    {solution.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {solution.description}
+                  </p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
