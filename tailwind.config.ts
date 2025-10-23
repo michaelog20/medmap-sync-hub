@@ -103,6 +103,12 @@ export default {
           "0%, 100%": { transform: "translateY(0px) scale(1)" },
           "50%": { transform: "translateY(-10px) scale(1.02)" },
         },
+        "pills-bounce": {
+          "0%, 100%": { transform: "translateY(0) scale(1)", opacity: "1" },
+          "25%": { transform: "translateY(-8px) scale(1.03)", opacity: "0.95" },
+          "50%": { transform: "translateY(-4px) scale(1.01)", opacity: "0.98" },
+          "75%": { transform: "translateY(-2px) scale(1.005)", opacity: "0.99" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.3s ease-out",
@@ -113,6 +119,7 @@ export default {
         "scan-beam": "scan-beam 4s ease-in-out infinite",
         "flow-line": "flow-line 2s ease-out forwards",
         "float-subtle": "float-subtle 6s ease-in-out infinite",
+        "pills-bounce": "pills-bounce 3s ease-in-out infinite",
       },
     },
   },
