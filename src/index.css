@@ -221,19 +221,17 @@ body {
     animation: checkmark-pulse 3s ease-in-out infinite;
   }
 
-  /* Security glow animation */
-  @keyframes security-glow {
+  /* Security breathing animation */
+  @keyframes security-breathe {
     0%, 100% {
-      filter: drop-shadow(0 0 0px hsl(var(--secondary) / 0)) brightness(1);
-      opacity: 0.95;
+      transform: scale(1) translateY(0);
     }
     50% {
-      filter: drop-shadow(0 0 16px hsl(var(--secondary) / 0.5)) brightness(1.05);
-      opacity: 1;
+      transform: scale(1.03) translateY(-4px);
     }
   }
 
-  .animate-security-glow {
-    animation: security-glow 3.5s ease-in-out infinite;
+  .animate-security-breathe {
+    animation: security-breathe 4s ease-in-out infinite;
   }
 }

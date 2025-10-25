@@ -96,7 +96,7 @@ const HowItWorks = () => {
                         src={step.image}
                         alt={`Step ${step.number}: ${step.title}`}
                         className={`w-full h-full object-contain rounded-2xl shadow-lg hover-lift ${
-                          step.number === 1 ? "animate-bottle-bounce" : step.number === 2 ? "animate-checkmark-pulse" : "animate-security-glow"
+                          step.number === 1 ? "animate-bottle-bounce" : step.number === 2 ? "animate-checkmark-pulse" : "animate-security-breathe"
                         }`}
                         style={{ animationDelay: `${index * 0.2}s` }}
                       />
