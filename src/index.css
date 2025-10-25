@@ -190,4 +190,18 @@ body {
   .animate-arrow-bounce {
     animation: arrow-bounce 2s ease-in-out infinite;
   }
+
+  /* Bottle bounce animation */
+  @keyframes bottle-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  .animate-bottle-bounce {
+    animation: bottle-bounce 2.5s ease-in-out infinite;
+  }
 }

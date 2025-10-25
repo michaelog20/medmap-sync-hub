@@ -1,6 +1,6 @@
 import ScrollAnimations from "@/components/home/ScrollAnimations";
 
-import stepCapture from "@/assets/step-capture.jpg";
+import stepCapture from "@/assets/step-capture-bottle.png";
 import stepConfirm from "@/assets/step-confirm.jpg";
 import stepShare from "@/assets/step-share.jpg";
 
@@ -95,7 +95,9 @@ const HowItWorks = () => {
                       <img
                         src={step.image}
                         alt={`Step ${step.number}: ${step.title}`}
-                        className="w-full h-full object-contain rounded-2xl shadow-lg hover-lift animate-step-float"
+                        className={`w-full h-full object-contain rounded-2xl shadow-lg hover-lift ${
+                          step.number === 1 ? "animate-bottle-bounce" : "animate-step-float"
+                        }`}
                         style={{ animationDelay: `${index * 0.2}s` }}
                       />
                     </div>
