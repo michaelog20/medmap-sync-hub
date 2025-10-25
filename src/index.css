@@ -204,4 +204,20 @@ body {
   .animate-bottle-bounce {
     animation: bottle-bounce 2.5s ease-in-out infinite;
   }
+
+  /* Checkmark pulse animation */
+  @keyframes checkmark-pulse {
+    0%, 100% {
+      filter: drop-shadow(0 0 0px hsl(var(--primary) / 0));
+      transform: scale(1);
+    }
+    50% {
+      filter: drop-shadow(0 0 20px hsl(var(--primary) / 0.6));
+      transform: scale(1.02);
+    }
+  }
+
+  .animate-checkmark-pulse {
+    animation: checkmark-pulse 3s ease-in-out infinite;
+  }
 }
