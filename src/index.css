@@ -220,4 +220,20 @@ body {
   .animate-checkmark-pulse {
     animation: checkmark-pulse 3s ease-in-out infinite;
   }
+
+  /* Security glow animation */
+  @keyframes security-glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 0px hsl(var(--secondary) / 0)) brightness(1);
+      opacity: 0.95;
+    }
+    50% {
+      filter: drop-shadow(0 0 16px hsl(var(--secondary) / 0.5)) brightness(1.05);
+      opacity: 1;
+    }
+  }
+
+  .animate-security-glow {
+    animation: security-glow 3.5s ease-in-out infinite;
+  }
 }
