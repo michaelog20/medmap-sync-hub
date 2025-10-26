@@ -234,4 +234,126 @@ body {
   .animate-security-breathe {
     animation: security-breathe 4s ease-in-out infinite;
   }
+
+  /* Hexagon grid animations */
+  @keyframes hexagon-flow {
+    0% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
+
+  .animate-hexagon-flow {
+    animation: hexagon-flow 8s ease-in-out infinite;
+  }
+
+  @keyframes hexagon-drift {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(50px, 43.5px);
+    }
+  }
+
+  .animate-hexagon-drift {
+    animation: hexagon-drift 20s linear infinite;
+  }
+
+  /* Data flow dots */
+  .hexagon-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: hsl(var(--secondary));
+    box-shadow: 0 0 12px hsl(var(--secondary) / 0.8);
+    opacity: 0;
+  }
+
+  @keyframes dot-flow-1 {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(100vw, 30vh);
+      opacity: 0;
+    }
+  }
+
+  @keyframes dot-flow-2 {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(80vw, -20vh);
+      opacity: 0;
+    }
+  }
+
+  @keyframes dot-flow-3 {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(90vw, 40vh);
+      opacity: 0;
+    }
+  }
+
+  .hexagon-dot-1 {
+    left: 10%;
+    top: 20%;
+    animation: dot-flow-1 12s ease-in-out infinite;
+  }
+
+  .hexagon-dot-2 {
+    left: 30%;
+    top: 60%;
+    animation: dot-flow-2 15s ease-in-out infinite 2s;
+  }
+
+  .hexagon-dot-3 {
+    left: 5%;
+    top: 80%;
+    animation: dot-flow-3 18s ease-in-out infinite 4s;
+  }
+
+  .hexagon-dot-4 {
+    left: 20%;
+    top: 40%;
+    animation: dot-flow-1 14s ease-in-out infinite 6s;
+  }
+
+  .hexagon-dot-5 {
+    left: 15%;
+    top: 10%;
+    animation: dot-flow-2 16s ease-in-out infinite 8s;
+  }
 }
