@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroMockup from "@/assets/hero-phone-network.jpg";
+import heroMockup from "@/assets/hero-phone-transparent.png";
 
 const HeroSection = () => {
   return (
@@ -36,13 +36,11 @@ const HeroSection = () => {
           </div>
           <div className="relative animate-fade-in">
             <div className="relative z-10 group">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img
-                  src={heroMockup}
-                  alt="MedMap secure medication platform with glowing phone interface and data network visualization"
-                  className="w-full h-auto animate-hero-float"
-                />
-              </div>
+              <img
+                src={heroMockup}
+                alt="MedMap secure medication platform with glowing phone interface and data network visualization"
+                className="w-full h-auto animate-hero-float drop-shadow-2xl"
+              />
             </div>
             <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-primary/20 rounded-full blur-3xl opacity-30 -z-10" />
           </div>
