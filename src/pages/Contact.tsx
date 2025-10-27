@@ -49,7 +49,7 @@ const Contact = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="p-6 text-center">
+            <Card className="p-6 text-center transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Mail size={32} className="text-primary" />
               </div>
@@ -61,7 +61,7 @@ const Contact = () => {
               </p>
             </Card>
 
-            <Card className="p-6 text-center">
+            <Card className="p-6 text-center transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer">
               <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock size={32} className="text-secondary" />
               </div>
@@ -71,7 +71,7 @@ const Contact = () => {
               </p>
             </Card>
 
-            <Card className="p-6 text-center">
+            <Card className="p-6 text-center transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin size={32} className="text-accent" />
               </div>
