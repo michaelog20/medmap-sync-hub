@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroMockup from "@/assets/hero-pills-bounce.jpg";
+import heroMockup from "@/assets/hero-phone-network.jpg";
 
 const HeroSection = () => {
   return (
@@ -39,7 +39,7 @@ const HeroSection = () => {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   src={heroMockup}
-                  alt="MedMap medication list interface showing phone with colorful pills bouncing dynamically"
+                  alt="MedMap secure medication platform with glowing phone interface and data network visualization"
                   className="w-full h-auto animate-hero-float"
                 />
               </div>
