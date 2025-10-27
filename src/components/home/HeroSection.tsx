@@ -2,27 +2,25 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroMockup from "@/assets/hero-pills-bounce.jpg";
-import HexagonBackground from "./HexagonBackground";
 
 const HeroSection = () => {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
-      <HexagonBackground />
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <div className="inline-block mb-4">
-              <span className="bg-white/20 text-white backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium border border-white/30">
+              <span className="bg-primary/20 text-primary-foreground backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium border border-primary/30">
                 Personal Medication Reconciliation
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Keep Every Medication in <span className="text-secondary">Sync</span> — <span className="text-secondary">Safely and Simply</span>
             </h1>
-            <p className="text-xl text-white/95 mb-4 drop-shadow-md">
+            <p className="text-xl text-foreground/90 mb-4">
               The first medication reconciliation platform built for patients, providers, and pharmacists.
             </p>
-            <p className="text-lg text-white/90 mb-8 drop-shadow-md">
+            <p className="text-lg text-muted-foreground mb-8">
               With MedMap, you capture, verify, and share a single <strong>up-to-date medication list</strong>. Reduce errors, prevent adverse interactions, and give every care provider confidence they're working from the same record.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -46,7 +44,7 @@ const HeroSection = () => {
                 />
               </div>
             </div>
-            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-gradient-hero rounded-full blur-3xl opacity-20 -z-10 animate-pulse-glow" />
+            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-primary/20 rounded-full blur-3xl opacity-30 -z-10" />
           </div>
         </div>
       </div>
