@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-transparent via-slate-900/80 to-blue-950 text-background">
+    <footer className="bg-gradient-to-b from-slate-900/70 via-blue-950/90 to-blue-900 text-background">
       {/* Footer Links */}
       <div className="py-12">
         <div className="container mx-auto px-4">
