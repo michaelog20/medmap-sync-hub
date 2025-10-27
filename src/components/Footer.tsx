@@ -1,27 +1,8 @@
 import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
-      {/* CTA Section */}
-      <div className="bg-gradient-hero py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Safer Medications, Better Care — For Everyone
-          </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join the waitlist and be part of the future of medication safety.
-          </p>
-          <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
-            <Link to="/pilot-signup">
-              Join the Waitlist <ArrowRight className="ml-2" size={20} />
-            </Link>
-          </Button>
-        </div>
-      </div>
-
       {/* Footer Links */}
       <div className="py-12">
         <div className="container mx-auto px-4">

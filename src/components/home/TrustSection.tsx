@@ -1,7 +1,4 @@
 import { Shield, Users, Lock } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 const trustPoints = [
   {
@@ -55,26 +52,6 @@ const TrustSection = () => {
               </div>
             );
           })}
-        </div>
-
-        {/* Footer CTA */}
-        <div className="text-center py-16 px-4 rounded-2xl bg-gradient-hero scroll-fade-in">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Safer Medications, Better Care — For Everyone
-          </h3>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join the pilot or contact us to learn more about how MedMap can help
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-              <Link to="/pilot-signup">
-                Join the Pilot <ArrowRight className="ml-2" size={20} />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              <Link to="/contact">Contact Us</Link>
-            </Button>
-          </div>
         </div>
       </div>
     </section>

@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import ParticleNetworkBackground from "./components/ParticleNetworkBackground";
+import StickyPilotCTA from "./components/StickyPilotCTA";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Features from "./pages/Features";
@@ -32,6 +33,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <ParticleNetworkBackground />
+        <StickyPilotCTA />
         <div className="min-h-screen flex flex-col">
           <Navigation />
           <div className="flex-1">
