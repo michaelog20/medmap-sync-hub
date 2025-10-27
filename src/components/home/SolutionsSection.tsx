@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Camera, Shield, Share2, Calendar } from "lucide-react";
-import solutionCapture from "@/assets/solution-capture.png";
-import solutionVerify from "@/assets/solution-verify.png";
-import solutionShare from "@/assets/solution-share.png";
-import solutionAdherence from "@/assets/solution-adherence.png";
+import solutionCapture from "@/assets/solution-capture.jpg";
+import solutionVerify from "@/assets/solution-verify.jpg";
+import solutionShare from "@/assets/solution-share.jpg";
+import solutionAdherence from "@/assets/solution-adherence.jpg";
 
 const solutions = [
   {
@@ -51,7 +51,7 @@ const SolutionsSection = () => {
             return (
               <Card
                 key={index}
-                className="group hover-lift border-2 overflow-hidden scroll-fade-in transition-all duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-xl bg-slate-900/75 backdrop-blur-sm"
+                className="group hover-lift border-2 overflow-hidden scroll-fade-in transition-all duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-xl"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative h-48 overflow-hidden">
@@ -63,12 +63,12 @@ const SolutionsSection = () => {
                 </div>
                 <CardContent className="p-6">
                   <div className="mb-4 icon-glow">
-                    <Icon className="h-8 w-8 text-secondary" />
+                    <Icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-primary mb-3">
                     {solution.title}
                   </h3>
-                  <p className="text-gray-200">
+                  <p className="text-muted-foreground">
                     {solution.description}
                   </p>
                 </CardContent>
