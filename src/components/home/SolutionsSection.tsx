@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Camera, Shield, Share2, Calendar } from "lucide-react";
-import solutionCapture from "@/assets/solution-capture.jpg";
-import solutionVerify from "@/assets/solution-verify.jpg";
-import solutionShare from "@/assets/solution-share.jpg";
-import solutionAdherence from "@/assets/solution-adherence.jpg";
+import solutionCapture from "@/assets/solution-capture.png";
+import solutionVerify from "@/assets/solution-verify.png";
+import solutionShare from "@/assets/solution-share.png";
+import solutionAdherence from "@/assets/solution-adherence.png";
 
 const solutions = [
   {
@@ -51,24 +51,24 @@ const SolutionsSection = () => {
             return (
               <Card
                 key={index}
-                className="group hover-lift border-2 overflow-hidden scroll-fade-in transition-all duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-xl"
+                className="group hover-lift overflow-hidden scroll-fade-in transition-all duration-300 hover:-translate-y-2 bg-slate-800/95 border-slate-700/50 hover:border-secondary/60 shadow-[0_0_30px_rgba(59,130,246,0.15)] hover:shadow-[0_0_40px_rgba(59,130,246,0.3)]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden flex items-center justify-center bg-slate-900/50">
                   <img
                     src={solution.image}
                     alt={solution.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="w-auto h-40 object-contain transition-transform duration-300 hover:scale-110 drop-shadow-2xl"
                   />
                 </div>
                 <CardContent className="p-6">
                   <div className="mb-4 icon-glow">
-                    <Icon className="h-8 w-8 text-primary" />
+                    <Icon className="h-8 w-8 text-secondary" />
                   </div>
-                  <h3 className="text-xl font-bold text-primary mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     {solution.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-300">
                     {solution.description}
                   </p>
                 </CardContent>
