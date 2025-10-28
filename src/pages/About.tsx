@@ -1,19 +1,18 @@
 import ScrollAnimations from "@/components/home/ScrollAnimations";
 import { TeamMember } from "@/components/about/TeamMember";
-import projectLeadImage from "@/assets/team-project-lead.jpg";
 
 const teamMembers = [
   {
-    name: "Michael Tesfu Teferi",
+    name: "Dr. Sarah Chen",
     role: "Project Lead & Health Informatics Researcher",
-    bio: "Michael is a Master's student in Health Informatics with a passion for medication safety and patient empowerment. He leads the MedMap research pilot and collaborates with clinical partners to ensure the tool meets real-world needs.",
-    image: projectLeadImage
+    bio: "Sarah is a Master's student in Health Informatics with a passion for medication safety and patient empowerment. She leads the MedMap research pilot and collaborates with clinical partners to ensure the tool meets real-world needs.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
   },
   {
-    name: "Dr. Rohan Kumar",
+    name: "Dr. Michael Rodriguez",
     role: "Clinical Advisor & Pharmacist",
-    bio: "Dr. Kumar is a community pharmacist with over 15 years of experience. He provides clinical guidance on medication reconciliation workflows and helps validate MedMap's safety checks against real-world pharmacy practice.",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop"
+    bio: "Michael is a community pharmacist with over 15 years of experience. He provides clinical guidance on medication reconciliation workflows and helps validate MedMap's safety checks against real-world pharmacy practice.",
+    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop"
   },
   {
     name: "Emily Thompson",
@@ -25,7 +24,7 @@ const teamMembers = [
     name: "James Park",
     role: "UX Designer & Patient Advocate",
     bio: "James focuses on making complex healthcare technology accessible and intuitive. His user-centered design approach ensures MedMap serves patients of all technical backgrounds and health literacy levels.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
   }
 ];
 
