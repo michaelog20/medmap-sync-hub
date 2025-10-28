@@ -1,6 +1,6 @@
 import ScrollAnimations from "@/components/home/ScrollAnimations";
 
-import stepCapture from "@/assets/step-capture-phone-scan.png";
+import stepCapture from "@/assets/step-capture-bottle.png";
 import stepConfirm from "@/assets/step-confirm-checkmark.jpg";
 import stepShare from "@/assets/step-share-secure.png";
 
