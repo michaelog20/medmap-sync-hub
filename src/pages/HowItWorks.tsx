@@ -2,7 +2,7 @@ import ScrollAnimations from "@/components/home/ScrollAnimations";
 
 import stepCapture from "@/assets/solution-capture.png";
 import stepConfirm from "@/assets/step-confirm-touch.png";
-import stepShare from "@/assets/solution-share.png";
+import stepShare from "@/assets/step-share-secure-devices.png";
 
 const steps = [
   {
