@@ -179,6 +179,85 @@ body {
     transform: rotateY(180deg);
   }
 
+  /* Team Member Card Styles */
+  .team-member-card {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+    will-change: transform;
+  }
+
+  .team-member-inner {
+    position: relative;
+    border-radius: 0.75rem;
+    background: hsl(var(--card) / 0.7);
+    backdrop-filter: blur(8px);
+    border: 2px solid hsl(var(--primary) / 0.2);
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .team-member-card:hover .team-member-inner {
+    transform: translateY(-8px) translateZ(20px);
+    border-color: hsl(var(--primary) / 0.6);
+    box-shadow: 0 16px 48px hsl(var(--primary) / 0.25), 0 0 40px hsl(var(--primary) / 0.15);
+  }
+
+  .team-member-image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .team-member-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+  }
+
+  .team-member-card:hover .team-member-image {
+    transform: scale(1.05);
+  }
+
+  .team-member-heartbeat {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at center, hsl(var(--primary) / 0.3) 0%, transparent 70%);
+    animation: digital-heartbeat 4s ease-in-out infinite;
+  }
+
+  .team-member-card:hover .team-member-heartbeat {
+    animation: digital-heartbeat-hover 2s ease-in-out infinite;
+  }
+
+  .team-member-content {
+    padding: 2rem;
+  }
+
+  @keyframes digital-heartbeat {
+    0%, 100% {
+      opacity: 0.2;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes digital-heartbeat-hover {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.03);
+    }
+  }
+
   /* Hero float animation */
   @keyframes hero-float {
     0%, 100% {
