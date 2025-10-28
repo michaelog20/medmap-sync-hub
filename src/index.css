@@ -11,26 +11,26 @@ All colors MUST be HSL.
     /* MedMap Dark Theme with Particle Network */
     --background: 222 47% 11%; /* Dark navy */
     --background-gradient: linear-gradient(180deg, hsl(222 47% 11%) 0%, hsl(217 33% 17%) 100%);
-    --foreground: 210 40% 98%; /* Light text */
+    --foreground: 0 0% 100%; /* Pure white for maximum readability */
     
     /* Subtle gradient background values */
     --bg-gradient-start: 210 40% 98.5%;
     --bg-gradient-end: 210 20% 99.2%;
     
     --card: 217 33% 17%; /* Slightly lighter than background */
-    --card-foreground: 210 40% 98%;
+    --card-foreground: 0 0% 100%; /* Pure white */
     
     --popover: 217 33% 17%;
-    --popover-foreground: 210 40% 98%;
+    --popover-foreground: 0 0% 100%; /* Pure white */
     
-    --primary: 208 88% 44%;
+    --primary: 208 88% 55%; /* Brighter blue for better visibility */
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 192 91% 40%;
+    --secondary: 192 91% 50%; /* Brighter cyan for better visibility */
     --secondary-foreground: 0 0% 100%;
     
     --muted: 217 33% 22%;
-    --muted-foreground: 215 20% 65%;
+    --muted-foreground: 0 0% 85%; /* Much lighter for better readability */
     
     --accent: 28 100% 51%;
     --accent-foreground: 0 0% 100%;
