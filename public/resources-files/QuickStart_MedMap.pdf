@@ -8,8 +8,8 @@ endobj
 2 0 obj
 <<
 /Type /Pages
-/Kids [3 0 R 4 0 R]
-/Count 2
+/Kids [3 0 R]
+/Count 1
 >>
 endobj
 3 0 obj
@@ -17,182 +17,56 @@ endobj
 /Type /Page
 /Parent 2 0 R
 /MediaBox [0 0 612 792]
-/Contents 5 0 R
+/Contents 4 0 R
 /Resources <<
 /Font <<
-/F1 6 0 R
-/F2 7 0 R
+/F1 5 0 R
 >>
 >>
 >>
 endobj
 4 0 obj
 <<
-/Type /Page
-/Parent 2 0 R
-/MediaBox [0 0 612 792]
-/Contents 8 0 R
-/Resources <<
-/Font <<
-/F1 6 0 R
-/F2 7 0 R
->>
->>
->>
-endobj
-5 0 obj
-<<
-/Length 2200
+/Length 800
 >>
 stream
 BT
-/F1 32 Tf
+/F1 24 Tf
 50 720 Td
 (MedMap Quick-Start Guide) Tj
 0 -50 Td
-/F2 14 Tf
-(Welcome to MedMap! This guide will help you set up and use your medication) Tj
-0 -20 Td
-(management system effectively and safely.) Tj
-0 -50 Td
-/F1 18 Tf
-(Step 1: Capture Your Medications) Tj
-0 -30 Td
-/F2 12 Tf
-(Goal: Build a complete list of all your current medications, supplements, and vitamins.) Tj
-0 -25 Td
-(Instructions:) Tj
-0 -20 Td
-(  1. Open the MedMap app or web form) Tj
-0 -18 Td
-(  2. Choose your preferred capture method:) Tj
-0 -18 Td
-(     - Scan the medication barcode for instant recognition) Tj
-0 -18 Td
-(     - Snap a photo of the label \(our OCR reads the details\)) Tj
-0 -18 Td
-(     - Upload a CSV file if you have multiple medications) Tj
-0 -18 Td
-(     - Type them in manually with name, dose, and frequency) Tj
-0 -18 Td
-(  3. Repeat for each medication you take regularly) Tj
-0 -25 Td
-(Pro Tips:) Tj
-0 -18 Td
-(  - Keep medication bottles handy during setup) Tj
-0 -18 Td
-(  - Include vitamins and supplements - they can interact with medications) Tj
-0 -18 Td
-(  - Use good lighting when photographing labels for best OCR results) Tj
-0 -40 Td
-/F1 18 Tf
-(Step 2: Verify & Protect) Tj
-0 -30 Td
-/F2 12 Tf
-(Goal: Ensure accuracy and identify potential drug interactions or safety concerns.) Tj
-0 -25 Td
-(Instructions:) Tj
-0 -20 Td
-(  1. Review each medication entry for accuracy) Tj
-0 -18 Td
-(  2. Confirm dosage strength \(mg, mcg, etc.\)) Tj
-0 -18 Td
-(  3. Verify route \(oral, topical, injection\) and frequency) Tj
-0 -18 Td
-(  4. Check for interaction alerts:) Tj
-0 -18 Td
-(     - RED alerts: Serious - consult your provider immediately) Tj
-0 -18 Td
-(     - YELLOW alerts: Moderate - discuss with provider) Tj
-0 -18 Td
-(     - BLUE alerts: Informational notes) Tj
-0 -18 Td
-(  5. Tap any alert for detailed, patient-friendly explanation) Tj
-ET
-endstream
-endobj
-8 0 obj
-<<
-/Length 1800
->>
-stream
-BT
-/F1 18 Tf
-50 720 Td
-(Step 3: Share Securely) Tj
-0 -30 Td
-/F2 12 Tf
-(Goal: Provide your verified medication list to healthcare providers in their) Tj
-0 -18 Td
-(preferred format while maintaining privacy and security.) Tj
-0 -25 Td
-(Instructions:) Tj
-0 -20 Td
-(  1. Tap "Export" or "Share" in MedMap) Tj
-0 -18 Td
-(  2. Choose your sharing method:) Tj
-0 -18 Td
-(     - Export as FHIR file for healthcare systems) Tj
-0 -18 Td
-(     - Download PDF for universal compatibility) Tj
-0 -18 Td
-(     - Generate secure share link with optional access code) Tj
-0 -18 Td
-(  3. Each export includes version stamp and provenance information) Tj
-0 -18 Td
-(  4. Share directly with your clinician, pharmacist, or care team) Tj
-0 -25 Td
-(Security Note: All exports are timestamped and trackable in your Activity log.) Tj
-0 -40 Td
-/F1 18 Tf
-(Step 4: Support Adherence) Tj
-0 -30 Td
-/F2 12 Tf
-(Goal: Stay on track with your medication schedule and maintain an up-to-date list.) Tj
-0 -25 Td
-(Instructions:) Tj
-0 -20 Td
-(  1. Set up medication reminders for each prescription) Tj
-0 -18 Td
-(  2. Log when you take medications to track adherence) Tj
-0 -18 Td
-(  3. Update your list when medications change) Tj
-0 -18 Td
-(  4. Review and refresh your list monthly) Tj
-0 -50 Td
-/F1 16 Tf
-(Summary & Next Steps) Tj
-0 -25 Td
-/F2 12 Tf
-(You've now created a comprehensive, verified medication list that you can) Tj
-0 -18 Td
-(securely share with your healthcare team. Keep it updated as your medications) Tj
-0 -18 Td
-(change, and use the adherence features to stay on track.) Tj
-0 -40 Td
 /F1 14 Tf
-(Need Help?) Tj
+(Welcome to MedMap! This guide helps you set up your first medication list.) Tj
+0 -40 Td
+/F1 16 Tf
+(Steps:) Tj
+0 -30 Td
+/F1 12 Tf
+(1. Open the MedMap app or web form) Tj
+0 -20 Td
+(2. Add your medicines:) Tj
+0 -20 Td
+(   - Scan the barcode) Tj
+0 -20 Td
+(   - Snap a photo) Tj
+0 -20 Td
+(   - Type them in manually) Tj
+0 -30 Td
+(3. Review and confirm your list) Tj
+0 -30 Td
+(4. Share securely with your clinician or pharmacist) Tj
+0 -50 Td
+/F1 14 Tf
+(Need help?) Tj
 0 -25 Td
-/F2 11 Tf
+/F1 12 Tf
 (Visit our FAQ: medmap.study/resources/faq) Tj
 0 -20 Td
 (Contact support: research@medmap.study) Tj
-0 -20 Td
-(Join the pilot: medmap.study/pilot-signup) Tj
-0 -40 Td
-/F2 9 Tf
-(Page 2 of 2  |  Version 1.0  |  MedMap Research Team) Tj
 ET
 endstream
 endobj
-6 0 obj
-<<
-/Type /Font
-/Subtype /Type1
-/BaseFont /Helvetica-Bold
->>
-endobj
-7 0 obj
+5 0 obj
 <<
 /Type /Font
 /Subtype /Type1
@@ -200,21 +74,18 @@ endobj
 >>
 endobj
 xref
-0 9
+0 6
 0000000000 65535 f
 0000000009 00000 n
-0000000068 00000 n
-0000000133 00000 n
-0000000289 00000 n
-0000000445 00000 n
-0000002698 00000 n
-0000002777 00000 n
-0000002850 00000 n
+0000000058 00000 n
+0000000115 00000 n
+0000000274 00000 n
+0000001126 00000 n
 trailer
 <<
-/Size 9
+/Size 6
 /Root 1 0 R
 >>
 startxref
-4703
+1223
 %%EOF
