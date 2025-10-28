@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -11,14 +11,50 @@ interface FeaturePanelProps {
 
 export const FeaturePanel = ({ icon: Icon, title, description, index }: FeaturePanelProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    // Cleanup timeout on unmount
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleMouseEnter = () => {
+    // Clear any pending reversion timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setIsFlipped(true);
+  };
+
+  const handleMouseLeave = () => {
+    // Set a delay before reverting to default state
+    timeoutRef.current = setTimeout(() => {
+      setIsFlipped(false);
+      timeoutRef.current = null;
+    }, 500);
+  };
+
+  const handleClick = () => {
+    // Clear any pending timeout on click
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setIsFlipped(!isFlipped);
+  };
 
   return (
     <div 
       className="feature-panel-container scroll-fade-in"
       style={{ animationDelay: `${index * 0.1}s` }}
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
-      onClick={() => setIsFlipped(!isFlipped)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
     >
       <div className={cn(
         "feature-panel-inner",
