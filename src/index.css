@@ -258,6 +258,45 @@ body {
     }
   }
 
+  /* Data Flow Indicator Dots */
+  .data-flow-dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: hsl(var(--secondary));
+    box-shadow: 0 0 8px hsl(var(--secondary));
+  }
+
+  .data-flow-dot-1 {
+    top: -2px;
+    right: -2px;
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  .data-flow-dot-2 {
+    bottom: -2px;
+    right: -2px;
+    animation: pulse-dot 2s ease-in-out infinite 0.6s;
+  }
+
+  .data-flow-dot-3 {
+    top: 50%;
+    right: -8px;
+    animation: pulse-dot 2s ease-in-out infinite 1.2s;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+  }
+
   /* Hero float animation */
   @keyframes hero-float {
     0%, 100% {
