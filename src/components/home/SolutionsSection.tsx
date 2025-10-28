@@ -51,14 +51,14 @@ const SolutionsSection = () => {
             return (
               <Card
                 key={index}
-                className="group hover-lift overflow-hidden scroll-fade-in transition-all duration-300 hover:-translate-y-2 bg-slate-800/95 border-slate-700/50 hover:border-secondary/60 shadow-[0_0_30px_rgba(59,130,246,0.15)] hover:shadow-[0_0_40px_rgba(59,130,246,0.3)]"
+                className="group hover-lift overflow-hidden scroll-fade-in transition-all duration-300 hover:-translate-y-2 bg-[#181818] border-slate-700/30 hover:border-secondary/50 shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.2)]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative h-48 overflow-hidden flex items-center justify-center bg-slate-900/50">
+                <div className="relative h-48 overflow-hidden flex items-center justify-center bg-transparent">
                   <img
                     src={solution.image}
                     alt={solution.title}
-                    className="w-auto h-40 object-contain transition-transform duration-300 hover:scale-110 drop-shadow-2xl"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <CardContent className="p-6">
