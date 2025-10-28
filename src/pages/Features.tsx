@@ -1,6 +1,7 @@
 import { Camera, Shield, Share2, Bell, History, Users, BarChart3, Lock } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ScrollAnimations from "@/components/home/ScrollAnimations";
+import { FeatureSpheres } from "@/components/features/FeatureSpheres";
 
 const features = [
   {
@@ -49,12 +50,29 @@ const Features = () => {
   return (
     <main>
       <ScrollAnimations />
+      
+      {/* Interactive Spheres Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 scroll-fade-in">
+          <div className="text-center mb-12 scroll-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Features
+              Features at a Glance
             </h1>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Interactive features showcase
+            </p>
+          </div>
+          <FeatureSpheres />
+        </div>
+      </section>
+
+      {/* Detailed Features Section */}
+      <section className="py-20 bg-background/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 scroll-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Complete Feature Set
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Everything you need for safer medication management
             </p>
