@@ -13,7 +13,7 @@ const QuickStart = () => {
 
           <Card className="p-8">
             <p className="text-lg text-muted-foreground mb-8">
-              Welcome to MedMap! This one-page starter helps you set up your first medication list in minutes.
+              Welcome to MedMap! This comprehensive guide helps you set up your first medication list in minutes.
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mb-6">Steps:</h2>
