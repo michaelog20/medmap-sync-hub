@@ -1,7 +1,6 @@
 import { Camera, Shield, Share2, Bell, History, Users, BarChart3, Lock } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ScrollAnimations from "@/components/home/ScrollAnimations";
-import { FeatureSpheres } from "@/components/features/FeatureSpheres";
+import { FeaturePanel } from "@/components/features/FeaturePanel";
 
 const features = [
   {
@@ -51,55 +50,28 @@ const Features = () => {
     <main>
       <ScrollAnimations />
       
-      {/* Interactive Spheres Section */}
+      {/* Interactive Data Panels Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 scroll-fade-in">
+          <div className="text-center mb-16 scroll-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Features at a Glance
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Interactive features showcase
+              Hover or click any panel to explore detailed features
             </p>
           </div>
-          <FeatureSpheres />
-        </div>
-      </section>
-
-      {/* Detailed Features Section */}
-      <section className="py-20 bg-background/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 scroll-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Complete Feature Set
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Everything you need for safer medication management
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <Card 
-                  key={index} 
-                  className="hover-lift scroll-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CardHeader>
-                    <div className="icon-glow mb-4">
-                      <Icon className="h-10 w-10 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base leading-relaxed">
-                      {feature.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {features.map((feature, index) => (
+              <FeaturePanel
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                index={index}
+              />
+            ))}
           </div>
         </div>
       </section>
