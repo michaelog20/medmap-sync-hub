@@ -1,6 +1,8 @@
 import ScrollAnimations from "@/components/home/ScrollAnimations";
 import { TeamMember } from "@/components/about/TeamMember";
 import projectLeadImage from "@/assets/team-project-lead.jpg";
+import rohanKumarImage from "@/assets/team-rohan-kumar.png";
+import jamesParkImage from "@/assets/team-james-park.png";
 
 const teamMembers = [
   {
@@ -10,10 +12,10 @@ const teamMembers = [
     image: projectLeadImage
   },
   {
-    name: "Dr. Rohan Kumar",
+    name: "Rohan Kumar",
     role: "Clinical Advisor & Pharmacist",
-    bio: "Dr. Kumar is a community pharmacist with over 15 years of experience. He provides clinical guidance on medication reconciliation workflows and helps validate MedMap's safety checks against real-world pharmacy practice.",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop"
+    bio: "Rohan is a community pharmacist with over 15 years of experience. He provides clinical guidance on medication reconciliation workflows and helps validate MedMap's safety checks against real-world pharmacy practice.",
+    image: rohanKumarImage
   },
   {
     name: "Emily Thompson",
@@ -25,7 +27,7 @@ const teamMembers = [
     name: "James Park",
     role: "UX Designer & Patient Advocate",
     bio: "James focuses on making complex healthcare technology accessible and intuitive. His user-centered design approach ensures MedMap serves patients of all technical backgrounds and health literacy levels.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop"
+    image: jamesParkImage
   }
 ];
 
