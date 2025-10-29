@@ -64,11 +64,11 @@ const FHIRGuide = () => {
           </Card>
 
           <Card className="p-8">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-semibold text-foreground">
-                Sample FHIR Payload
-              </h3>
-              <div className="flex gap-3">
+            <div className="space-y-6">
+              <div className="flex items-center justify-between">
+                <h3 className="text-xl font-semibold text-foreground">
+                  Sample FHIR Payload
+                </h3>
                 <Button
                   variant="outline"
                   size="sm"
@@ -87,13 +87,11 @@ const FHIRGuide = () => {
                     </>
                   )}
                 </Button>
-                <Button size="sm" className="gap-2" asChild>
-                  <a href="/resources-files/sample_medmap_fhir_export.json" download>
-                    <Download size={16} />
-                    Download JSON
-                  </a>
-                </Button>
               </div>
+              
+              <p className="text-muted-foreground border-l-4 border-primary pl-4 py-2">
+                A downloadable, FHIR-compliant version of the Medication List will be directly accessible for export within the main MedMap application and pilot environments.
+              </p>
             </div>
 
             <div 
