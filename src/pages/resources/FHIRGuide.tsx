@@ -1,10 +1,7 @@
-import { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Code, Download, ChevronDown, ChevronUp } from "lucide-react";
+import { Code } from "lucide-react";
 
 const FHIRGuide = () => {
-  const [showPayload, setShowPayload] = useState(false);
 
   return (
     <main className="pt-24 pb-20">
@@ -64,56 +61,12 @@ const FHIRGuide = () => {
           </Card>
 
           <Card className="p-8">
-            <div className="space-y-6">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold text-foreground">
-                  Sample FHIR Payload
-                </h3>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setShowPayload(!showPayload)}
-                  className="gap-2"
-                >
-                  {showPayload ? (
-                    <>
-                      <ChevronUp size={16} />
-                      Hide sample
-                    </>
-                  ) : (
-                    <>
-                      <ChevronDown size={16} />
-                      Show sample payload
-                    </>
-                  )}
-                </Button>
-              </div>
-              
-              <p className="text-muted-foreground border-l-4 border-primary pl-4 py-2">
-                A downloadable, FHIR-compliant version of the Medication List will be directly accessible for export within the main MedMap application and pilot environments.
-              </p>
-            </div>
-
-            <div 
-              className={`overflow-hidden transition-all duration-500 ${
-                showPayload ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
-              }`}
-            >
-              <pre className="bg-muted p-6 rounded-lg overflow-x-auto text-sm">
-                <code>{`{
-  "resourceType": "MedicationStatement",
-  "id": "example-medmap-001",
-  "status": "active",
-  "medicationCodeableConcept": {
-    "coding": [{
-      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-      "code": "197361",
-      "display": "Metformin 500 MG Oral Tablet"
-    }]
-  }
-}`}</code>
-              </pre>
-            </div>
+            <h3 className="text-xl font-semibold text-foreground mb-4">
+              FHIR Export Availability
+            </h3>
+            <p className="text-muted-foreground border-l-4 border-primary pl-4 py-2">
+              A downloadable, FHIR-compliant version of the Medication List will be directly accessible for export within the main MedMap application and pilot environments.
+            </p>
           </Card>
         </div>
       </div>
