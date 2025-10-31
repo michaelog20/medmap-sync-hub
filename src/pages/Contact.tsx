@@ -49,38 +49,47 @@ const Contact = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="p-6 text-center transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail size={32} className="text-primary" />
+            {/* Email Card */}
+            <Card className="contact-card contact-card-email p-6 text-center cursor-pointer group relative overflow-hidden">
+              <div className="relative z-10">
+                <div className="contact-icon-wrapper w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail size={32} className="text-primary contact-icon-email" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Email</h3>
+                <p className="text-lg text-muted-foreground">
+                  <a href="mailto:research@medmap.study" className="hover:text-primary transition-colors">
+                    research@medmap.study
+                  </a>
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">Email</h3>
-              <p className="text-lg text-muted-foreground">
-                <a href="mailto:research@medmap.study" className="hover:text-primary transition-colors">
-                  research@medmap.study
-                </a>
-              </p>
             </Card>
 
-            <Card className="p-6 text-center transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer">
-              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock size={32} className="text-secondary" />
+            {/* Response Time Card */}
+            <Card className="contact-card contact-card-time p-6 text-center cursor-pointer group relative overflow-hidden">
+              <div className="relative z-10">
+                <div className="contact-icon-wrapper w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock size={32} className="text-secondary contact-icon-time" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Response Time</h3>
+                <p className="text-lg text-muted-foreground">
+                  Within three business days
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">Response Time</h3>
-              <p className="text-lg text-muted-foreground">
-                Within three business days
-              </p>
             </Card>
 
-            <Card className="p-6 text-center transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin size={32} className="text-accent" />
+            {/* Location Card */}
+            <Card className="contact-card contact-card-location p-6 text-center cursor-pointer group relative overflow-hidden">
+              <div className="relative z-10">
+                <div className="contact-icon-wrapper w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin size={32} className="text-accent contact-icon-location" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Location</h3>
+                <p className="text-lg text-muted-foreground">
+                  University of Toronto<br />
+                  Dalla Lana School of Public Health<br />
+                  155 College St, Toronto, ON M5T 3M7
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">Location</h3>
-              <p className="text-lg text-muted-foreground">
-                University of Toronto<br />
-                Dalla Lana School of Public Health<br />
-                155 College St, Toronto, ON M5T 3M7
-              </p>
             </Card>
           </div>
 
