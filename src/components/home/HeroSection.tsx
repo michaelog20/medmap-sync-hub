@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroMockup from "@/assets/hero-medmap-mockup.png";
+import MedicationCounter from "./MedicationCounter";
 
 const HeroSection = () => {
   return (
@@ -14,9 +15,12 @@ const HeroSection = () => {
                 Personal Medication Reconciliation
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Keep Every Medication in <span className="text-secondary">Sync</span> — <span className="text-secondary">Safely and Simply</span>
-            </h1>
+            <div className="relative">
+              <MedicationCounter />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight relative z-10">
+                Keep Every Medication in <span className="text-secondary">Sync</span> — <span className="text-secondary">Safely and Simply</span>
+              </h1>
+            </div>
             <p className="text-xl text-foreground/90 mb-4">
               The first medication reconciliation platform built for patients, providers, and pharmacists.
             </p>
