@@ -507,3 +507,53 @@ body {
     animation: dot-flow-2 16s ease-in-out infinite 8s;
   }
 }
+
+/* Health Status Indicator Animations */
+@keyframes health-spike {
+  0% {
+    stroke: hsl(var(--muted-foreground) / 0.6);
+    transform: scaleY(1);
+  }
+  20% {
+    stroke: hsl(25, 95%, 53%);
+    transform: scaleY(1.5);
+  }
+  40% {
+    stroke: hsl(0, 84%, 60%);
+    transform: scaleY(1.8);
+  }
+  60% {
+    stroke: hsl(142, 76%, 36%);
+    transform: scaleY(1.2);
+  }
+  100% {
+    stroke: hsl(142, 76%, 36%);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes health-check {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-45deg);
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate-health-spike {
+  animation: health-spike 1.2s ease-in-out forwards;
+}
+
+.animate-health-check {
+  animation: health-check 1.2s ease-out forwards;
+}

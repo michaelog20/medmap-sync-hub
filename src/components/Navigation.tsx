@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import medmapLogo from "@/assets/medmap-logo.png";
+import HealthStatusIndicator from "@/components/navigation/HealthStatusIndicator";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,10 +24,13 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <img src={medmapLogo} alt="MedMap" className="w-10 h-10" />
-            <span className="font-bold text-xl text-foreground">MedMap</span>
-          </Link>
+          <div className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center space-x-2">
+              <img src={medmapLogo} alt="MedMap" className="w-10 h-10" />
+              <span className="font-bold text-xl text-foreground">MedMap</span>
+            </Link>
+            <HealthStatusIndicator />
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
