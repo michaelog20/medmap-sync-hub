@@ -1,4 +1,5 @@
 import ScrollAnimations from "@/components/home/ScrollAnimations";
+import ProvenanceTimeline from "@/components/how-it-works/ProvenanceTimeline";
 
 import stepCapture from "@/assets/solution-capture.png";
 import stepConfirm from "@/assets/step-confirm-touch.png";
@@ -32,6 +33,7 @@ const HowItWorks = () => {
   return (
     <main>
       <ScrollAnimations />
+      <ProvenanceTimeline />
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 scroll-fade-in">
@@ -59,6 +61,7 @@ const HowItWorks = () => {
               {steps.map((step, index) => (
                 <div
                   key={step.number}
+                  data-step={step.number}
                   className={`flex flex-col lg:flex-row items-center gap-8 scroll-fade-in ${
                     index % 2 === 1 ? "lg:flex-row-reverse" : ""
                   }`}
