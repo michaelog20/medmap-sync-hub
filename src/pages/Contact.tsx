@@ -85,8 +85,6 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">Location</h3>
                 <p className="text-lg text-muted-foreground">
-                  University of Toronto<br />
-                  Dalla Lana School of Public Health<br />
                   155 College St, Toronto, ON M5T 3M7
                 </p>
               </div>
