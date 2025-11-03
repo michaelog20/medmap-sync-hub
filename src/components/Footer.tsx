@@ -40,7 +40,6 @@ const Footer = () => {
             </div>
             <div>
               <h3 className="font-semibold mb-4 text-white">Legal</h3>
-              <DataFlowIndicator />
               <ul className="space-y-2">
                 <li>
                   <Link 
