@@ -577,97 +577,15 @@ body {
   position: relative;
 }
 
-/* Email Card - Pop-up with ripple */
-@keyframes email-popup {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes email-ripple {
-  0% {
-    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.8);
-  }
-  100% {
-    box-shadow: 0 0 0 25px rgba(59, 130, 246, 0);
-  }
-}
-
-.contact-card-email:hover {
-  animation: email-popup 0.6s ease-in-out, card-pulse-glow 4s ease-in-out infinite;
-  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
-}
-
-.contact-card-email:hover .contact-icon-wrapper {
-  animation: email-ripple 1s ease-out;
-}
-
-.contact-card-email:hover .contact-icon-email {
-  filter: brightness(1.3);
-  transition: filter 0.3s ease;
-}
-
-/* Response Time Card - Center ripple with glow */
-@keyframes time-ripple-out {
-  0% {
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(3);
-    opacity: 0;
-  }
-}
-
-@keyframes time-popup {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.contact-card-time:hover {
-  animation: time-popup 0.6s ease-in-out, card-pulse-glow 4s ease-in-out infinite;
-  box-shadow: 0 15px 40px rgba(147, 51, 234, 0.5);
-}
-
-.contact-card-time:hover::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(147, 51, 234, 0.4) 0%, rgba(147, 51, 234, 0.2) 40%, transparent 70%);
-  animation: time-ripple-out 1.2s ease-out;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.contact-card-time:hover .contact-icon-time {
-  filter: brightness(1.6) drop-shadow(0 0 8px rgba(147, 51, 234, 0.8));
-  transition: filter 0.4s ease;
-}
-
-/* Location Card - 3D tilt with pin pulse */
+/* Unified Contact Card Animations - 3D tilt with icon pulse */
+.contact-card-email,
+.contact-card-time,
 .contact-card-location {
   perspective: 1000px;
   transform-style: preserve-3d;
 }
 
-@keyframes location-tilt {
+@keyframes contact-tilt {
   0% {
     transform: rotateY(0deg) rotateX(0deg);
   }
@@ -679,22 +597,44 @@ body {
   }
 }
 
+.contact-card-email:hover {
+  animation: contact-tilt 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+}
+
+.contact-card-time:hover {
+  animation: contact-tilt 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  box-shadow: 0 15px 40px rgba(147, 51, 234, 0.5);
+}
+
 .contact-card-location:hover {
-  animation: location-tilt 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: contact-tilt 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   box-shadow: 0 15px 40px rgba(245, 158, 11, 0.5);
 }
 
-@keyframes pin-pulse {
+@keyframes icon-pulse {
   0%, 100% {
     transform: scale(1);
-    filter: brightness(1) drop-shadow(0 0 0 rgba(245, 158, 11, 0));
+    filter: brightness(1);
   }
   50% {
     transform: scale(1.3);
-    filter: brightness(1.8) drop-shadow(0 0 12px rgba(245, 158, 11, 0.9));
+    filter: brightness(1.8);
   }
 }
 
-.contact-card-location:hover .contact-icon-location {
-  animation: pin-pulse 0.8s ease-in-out;
+.contact-card-email:hover .contact-icon-email {
+  animation: icon-pulse 0.8s ease-in-out;
+  filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.9));
 }
+
+.contact-card-time:hover .contact-icon-time {
+  animation: icon-pulse 0.8s ease-in-out;
+  filter: drop-shadow(0 0 12px rgba(147, 51, 234, 0.9));
+}
+
+.contact-card-location:hover .contact-icon-location {
+  animation: icon-pulse 0.8s ease-in-out;
+  filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.9));
+}
+
